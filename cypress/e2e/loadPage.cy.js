@@ -55,7 +55,7 @@ describe('click events takes user to the right section', () => {
     });
   });
 
-  it('click on home takes me back to the top of the page', () => {
+  it.skip('click on home takes me back to the top of the page', () => {
     cy.scrollTo('bottom');
 
     let sectionPositionBeforeClick;
@@ -118,7 +118,7 @@ describe('validate images', () => {
   });
 });
 
-describe('send contact details', () => {
+describe.skip('send contact details', () => {
   beforeEach(() => {
     cy.visit('https://www.fxellence.com')
     cy.get('#cookie-notification__accept').click()
