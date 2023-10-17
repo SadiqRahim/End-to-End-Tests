@@ -4,7 +4,7 @@
   "description": "",
   "main": "fxellence.js",
   "scripts": {
-    "test": "cypress run"
+    "test": "cypress run --record"
   },
   "keywords": [],
   "author": "",
