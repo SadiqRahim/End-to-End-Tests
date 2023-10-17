@@ -14,5 +14,5 @@ jobs:
           record: true
           spec: cypress/e2e/loadPage.cy.js
         env:
-          CYPRESS_RECORD_KEY: 1d5562b2-e195-43d5-ba6d-d865da2b921a
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
