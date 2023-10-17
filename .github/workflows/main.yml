@@ -7,7 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: End-to-End-Tests
+        uses: actions/checkout@v2
+        with:
+          repository: SadiqRahim/End-to-End-Tests
       - name: Cypress run
         run: npm run test
         env:
