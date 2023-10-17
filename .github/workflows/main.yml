@@ -8,10 +8,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          repository: SadiqRahim/End-to-End-Tests
       - name: Cypress run
-        run: npm run test
+        uses: cypress-io/github-action@v6
+        with:
+          record: true
+          spec: cypress/e2e/loadPage.cy.js
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
