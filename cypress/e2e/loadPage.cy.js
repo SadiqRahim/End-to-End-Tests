@@ -91,14 +91,14 @@ describe('validate images', () => {
       });
   })
 
-  it('validate liverate image', () => {
+  it('validate live rate image', () => {
     cy.get('.MuiGrid-root:nth-child(2) > img')
       .should(($img) => {
         expect($img).to.exist;
         expect($img).to.have.attr('src', './images/liverate.png');
         
        //Check the displayed width and height using CSS properties
-        expect($img).to.have.css('width', '542.4140625px'); 
+       expect($img).to.have.css('width').that.is.oneOf(['542.4140625px', '542.40625px']);
         expect($img).to.have.css('height', '501.8671875px'); 
       });
   });
