@@ -1,5 +1,5 @@
 module.exports = {
-  projectId: 'eq5pdo',
+  projectId: 'z327se',
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
