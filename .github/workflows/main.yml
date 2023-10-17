@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Cypress Tests Workflow
 
 on: [push]
 
@@ -12,8 +12,11 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           record: true
-          build: npm run build
-          start: npm start
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Cypress tests
+        run: npm run test
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
